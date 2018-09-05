@@ -84,7 +84,7 @@ header('Content-Type: text/html; charset=utf-8');
                 echo "<td>";
                 echo "<form action='editar_produto.php' method='post'>";
                 echo "<input name='id' type='hidden' value='" .$dados['id']. "'>";
-                echo "<input name='nome' type='hidden' value='" .$dados['descricao']. "'>";
+                echo "<input name='descricao' type='hidden' value='" .$dados['descricao']. "'>";
                 echo "<button>Editar</button>";
                 echo "</form>";
                 
@@ -92,7 +92,7 @@ header('Content-Type: text/html; charset=utf-8');
                 // Colocamos o id dos dados a serem removidos dentro do input hidden
                 echo "<form action='validar_exclusao.php' method='post'>";
                 echo "<input name='id' type='hidden' value='" .$dados['id']. "'>";
-                echo "<input name='nome' type='hidden' value='" .$dados['descricao']. "'>";
+                echo "<input name='descricao' type='hidden' value='" .$dados['descricao']. "'>";
                 echo "<button>Remover</button>";
                 echo "</form>";
                 echo "</td>";

@@ -127,7 +127,7 @@ header('Content-Type: text/html; charset=utf-8');
             </tr>
             <tr>
               <td><a href="../index.php"><button type="button" class="btn btn-info">Retornar</button></a></td>
-              <td><a href="cadastro_cliente.php"><button type="button" class="btn btn-info">Cadastrar cliente</button></a></td>
+              <td><a href="cadastro_compras.php"><button type="button" class="btn btn-info">Cadastrar Compras</button></a></td>
             </table>
           </div>
     </body>

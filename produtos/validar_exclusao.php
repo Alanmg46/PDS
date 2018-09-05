@@ -23,7 +23,7 @@
                             </tr>
                             <tr>
                                 <td>Descrição:</td>
-                                <td><input type="text" readonly="true" name="nome" size="60" value="<?php echo $nome; ?>"></td>
+                                <td><input type="text" readonly="true" name="descricao" size="60" value="<?php echo $descricao; ?>"></td>
                             </tr>
                         </table>
                     <input class="btn btn-success" type="submit" name="gravar" value="Excluir">
