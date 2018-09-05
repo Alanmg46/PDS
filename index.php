@@ -64,8 +64,11 @@
         <div style="width: 60%; height: 60%; position: absolute; left:40%; top:40%; margin-left:-20%; margin-top:-10%; background-color: #ededed; ">
             <div style="text-align:center; font-weight: bold;">Menu</div>
             <div style="position: relative; top: 10%; left: 10%;">
-                <a href="consulta_cliente.php">Consulta de Clientes</a><br>
-                <a href="consulta_func.php">Consulta de Funcionários</a>
+                <a href="cliente/consulta_cliente.php">Consulta de Clientes</a><br>
+                <a href="funcionario/consulta_func.php">Consulta de Funcionários</a><br>
+                <a href="fornecedor/consulta_forn.php">Consulta de Fornecedores</a><br>
+                <a href="compras/consulta_compras.php">Consulta de Compras</a><br>
+                <a href="produtos/consulta_produto.php">Consulta de Produtos</a>
             </div>
     </body>
     <footer style="position: fixed; bottom:0; left:0; background-color: #d6d6d6; width: 100%; height: 5em; text-align: center;">

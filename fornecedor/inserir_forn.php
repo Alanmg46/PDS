@@ -18,7 +18,7 @@ function mask($val, $mask)
  }
  return $maskared;
 }
-include("conexao.php");
+include("../conexao.php");
 // INICIA LIGAÇÃO À BASE DE DADOS
 $con=mysqli_connect("localhost","root","","pds");
 
@@ -31,20 +31,16 @@ if (mysqli_connect_errno())
 
 
 $nome = $_POST['nome'];
-$data = mask($_POST['data'], '##/##/####');
 $telefone = $_POST['telefone'];
-$cep = mask($_POST['cep'], '#####-###');
-$rua = $_POST['rua'];
-$numero = $_POST['numero'];
-$bairro = $_POST['bairro'];
-$cidade = $_POST['cidade'];
+$cidade = $_POST['telefone'];
 $estado = $_POST['estado'];
+$endereco = $_POST['endereco'];
 $email = $_POST['email'];
 $cpf = mask($_POST['cpf'], '###.###.###-##');
 $cnpj = mask($_POST['cnpj'], '##.###.###/####-##');
 
 // CASO TUDO ESTEJA OK INSERE DADOS NA BASE DE DADOS
-$sql = "INSERT INTO cliente (id, nome, datanasc, telefone, cep, rua, numero, bairro, cidade, estado, email, cpf, cnpj) VALUES (NULL, '$nome', '$data', '$telefone', '$cep', '$rua', '$numero', '$bairro', '$cidade', '$estado', '$email', '$cpf', '$cnpj')";
+$sql = "INSERT INTO fornecedor (id, nome, telefone, cidade, estado, endereco, email, cpf, cnpj) VALUES (NULL, '$nome', '$telefone', '$cidade', '$estado', '$endereco', '$email', '$cpf', '$cnpj')";
 
 
 // CASO ESTEJA TUDO OK ADICIONA OS DADOS, SENÃO MOSTRA O ERRO
@@ -53,7 +49,7 @@ if (!mysqli_query($con,$sql))
     die('Error: ' . mysqli_error($con));
 }
 // MOSTRA A MENSAGEM DE SUCESSO
-echo "Cliente cadastrado com SUCESSO";
+echo "Fornecedor cadastrado com SUCESSO";
 
 mysqli_close($con);
 

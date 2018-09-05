@@ -30,10 +30,12 @@
                         <td><input type="text" name="salario" id="salario" /></td>
                     </tr>
                     <tr>
-                        <select name="funcao">
-                          <option value="Motorista">Motorista</option>
-                          <option value="Técnico">Técnico</option>
-                        </select>
+                        <td>Motorista</td>
+                        <td><input type="checkbox" name="funcao[]" value="Motorista"></td>
+                    </tr>
+                    <tr>
+                        <td>Técnico</td>
+                        <td><input type="checkbox" name="funcao[]" value="Técnico"></td>
                     </tr>
                     </tr>
                     <tr>

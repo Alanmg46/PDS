@@ -18,7 +18,7 @@ function mask($val, $mask)
  }
  return $maskared;
 }
-include("conexao.php");
+include("../conexao.php");
 // INICIA LIGAÇÃO À BASE DE DADOS
 $con=mysqli_connect("localhost","root","","pds");
 
@@ -29,13 +29,12 @@ if (mysqli_connect_errno())
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-
-
+$_funcao = $_POST['funcao'];
+$funcao = implode(",", $_funcao);
 $nome = $_POST['nome'];
 $identidade = $_POST['identidade'];
 $carteira = $_POST['carteira'];
 $salario = $_POST['salario'];
-$funcao = $_POST['funcao'];
 $conta = $_POST['conta'];
 $data = mask($_POST['data'], '##/##/####');
 $telefone = $_POST['telefone'];
@@ -45,13 +44,14 @@ $numero = $_POST['numero'];
 $bairro = $_POST['bairro'];
 $cidade = $_POST['cidade'];
 $estado = $_POST['estado'];
+$endereco = $rua. ', '.$numero.', '.$bairro.', '.$cidade.', '.$estado;
 $email = $_POST['email'];
 $cpf = mask($_POST['cpf'], '###.###.###-##');
 $cnpj = mask($_POST['cnpj'], '##.###.###/####-##');
 $observacao = $_POST['observacao'];
 
 // CASO TUDO ESTEJA OK INSERE DADOS NA BASE DE DADOS
-$sql = "INSERT INTO funcionario (id, nome, identidade, carteira, salario, funcao, conta, datanasc, telefone, cep, rua, numero, bairro, cidade, estado, email, cpf, cnpj, observacao) VALUES (NULL, '$nome', '$identidade', '$carteira', '$salario', '$funcao', '$conta', '$data', '$telefone', '$cep', '$rua', '$numero', '$bairro', '$cidade', '$estado', '$email', '$cpf', '$cnpj', '$observacao')";
+$sql = "INSERT INTO funcionario (id, nome, identidade, carteira, salario, funcao, conta, datanasc, telefone, cep, endereco, email, cpf, cnpj, observacao) VALUES (NULL, '$nome', '$identidade', '$carteira', '$salario', '$funcao', '$conta', '$data', '$telefone', '$cep', '$endereco', '$email', '$cpf', '$cnpj', '$observacao')";
 
 
 // CASO ESTEJA TUDO OK ADICIONA OS DADOS, SENÃO MOSTRA O ERRO
@@ -60,7 +60,7 @@ if (!mysqli_query($con,$sql))
     die('Error: ' . mysqli_error($con));
 }
 // MOSTRA A MENSAGEM DE SUCESSO
-echo "Funcionário cadastrado com SUCESSO";
+echo $endereco;
 
 mysqli_close($con);
 
