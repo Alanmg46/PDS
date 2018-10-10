@@ -2,64 +2,38 @@
     <head>
         <title>Projeto de Desenvolvimento de Sistemas</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <script type='text/javascript' src='http://files.rafaelwendel.com/jquery.js'></script>
-        <script type='text/javascript' src='cep.js'></script>
+        <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="//assets.locaweb.com.br/locastyle/2.0.6/stylesheets/locastyle.css">
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     </head>
     <div style="background-image: linear-gradient(to left, #3c82eb, #00adff, #00cdde, #00e389, #a8eb12); width: 100%; height: 3em; font-size: 1.5em; font-family: 'Raleway', sans-serif;"><div style="position: relative;
     top: 20%; text-align: center; font-weight: bold; color: white;">Projeto de Desenvolvimento de Sistemas</div></div>
     <body class="box" style="background-color: #ededed;">
         <div >
-            <div style="position: relative; top: 1em; text-align:center; font-weight: bold;">Cadastro de Clientes</div>
+            <div style="position: relative; top: 1em; text-align:center; font-weight: bold;">Cadastro de Compras</div>
             <div style="position: relative; top: 3em; left: 35em; width: 700px;">
-                <form action="inserir_cliente.php" method="post">
+                <form action="inserir_compras.php" method="post">
                 <table>
                     <tr>
-                        <td>Nome:</td>
-                        <td><input type="text" name="nome" id="nome" placeholder="Nome" /></td>
+                        <td>Data:</td>
+                        <td><input type="date" name="data" id="example1"></td>
                     </tr>
                     <tr>
-                        <td>Data de Nascimento:</td>
-                        <td><input type="text" name="data" id="data" placeholder="Data de Nascimento" /></td>
+                        <td>Fornecedor:</td>
+                        <td><input type="text" name="nome" id="nome"></td>
                     </tr>
                     <tr>
-                        <td>Telefone: </td>
-                        <td><input type="text" name="telefone" placeholder="Telefone"/></td>
+                        <td>Produto: </td>
+                        <td><input type="text" name="produto" placeholder="Produto"/></td>
                     </tr>
                      <tr>
-                        <td>CEP (Somente números):</td>
-                        <td><input type="text" name="cep" id="cep" placeholder="CEP (Somente números)"/></td>
+                        <td>Desconto:</td>
+                        <td><input type="text" name="desconto" placeholder="Desconto"/></td>
                     </tr>
                     <tr>
-                        <td>Rua: </td>
-                        <td><input type="text" name="rua" id="rua" size="45" placeholder="Rua"/></td>
-                    </tr>
-                    <tr>
-                        <td>Número: </td>
-                        <td><input type="text" name="numero" id="numero" size="5" placeholder="Número"/></td>
-                    </tr>
-                    <tr>
-                        <td>Bairro: </td>
-                        <td><input type="text" name="bairro" id="bairro" size="25" placeholder="Bairro"/></td>
-                    </tr>
-                    <tr>
-                        <td>Cidade: </td>
-                        <td><input type="text" name="cidade" id="cidade" size="25" placeholder="Cidade"/></td>
-                    </tr>
-                    <tr>
-                        <td>Estado: </td>
-                        <td><input type="text" name="estado" id="estado" size="50" placeholder="Estado"/></td>
-                    </tr>
-                    <tr>
-                        <td>Email: </td>
-                        <td><input type="text" name="email" id="email" placeholder="Email"/></td>
-                    </tr>
-                    <tr>
-                        <td>CPF (Somente números): </td>
-                        <td><input type="text" name="cpf" id="cpf" placeholder="CPF (Somente números)"/></td>
-                    </tr>
-                    <tr>
-                        <td>CNPJ (Somente números): </td>
-                        <td><input type="text" name="cnpj" id="cnpj" placeholder="CNPJ (Somente números)"/></td>
+                        <td>Valor total</td>
+                        <td><input type="text" name="valor_total" placeholder="Valor total"/></td>
                     </tr>
                 </table>
                 <br><br>
@@ -69,6 +43,9 @@
             </div>
         </div>
             
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
     </body>
     <footer style="position: fixed; bottom:0; left:0; background-color: #d6d6d6; width: 100%; height: 5em; text-align: center;">
         Desenvolvido por Alan M, Ana T, Anne G e Ramon V</br> © 2018</br><a href="https://www.dokuwiki.org/template:bootstrap3" title="Bootstrap template for DokuWiki" target="" class="navbar-link">

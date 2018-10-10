@@ -54,7 +54,7 @@ if (!mysqli_query($con,$sql))
     die('Error: ' . mysqli_error($con));
 }
 // MOSTRA A MENSAGEM DE SUCESSO
-echo "Cliente cadastrado com SUCESSO";
+header("Location:confirmar_cadastro.php");
 
 mysqli_close($con);
 

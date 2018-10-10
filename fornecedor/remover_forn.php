@@ -17,5 +17,5 @@
         exit;
     }
     //se tudo deu certo, redireciona pra exibe.php com remove igual a true
-    header("Location:consulta_forn.php");
+    header("Location:confirmar_exclusao.php");
 ?>

@@ -10,7 +10,7 @@
     <body class="box" style="background-color: #ededed;">
         <div >
             <div style="position: relative; top: 1em; text-align:center; font-weight: bold;">Cadastro de Funcionários</div>
-            <div style="position: relative; top: 4em; left: 35em; width: 700px; height: 800px;">
+            <div style="position: relative; top: 4em; left: 35em; width: 700px; height: 850px;">
                 <form action="inserir_func.php" method="post">
                 <table>
                     <tr>
@@ -95,7 +95,7 @@
                 </table>
                 <br><br>
                 <input class="btn btn-success" type="submit" name="gravar" value="Cadastrar">
-                <button type="button" class="btn btn-danger">Cancelar</button>
+                <input type="button" value="Cancelar" onClick="JavaScript: window.history.back();" class="btn btn-danger">
             </form>
             </div>
         </div>

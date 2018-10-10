@@ -10,7 +10,7 @@
             $datanasc = filter_input(INPUT_POST, 'datanasc');
             $telefone = filter_input(INPUT_POST, 'telefone');
             $cep = filter_input(INPUT_POST, 'cep');
-            $endereco = filter_input(INPUT_POST, $endereco);
+            $endereco = filter_input(INPUT_POST, 'endereco');
             $email = filter_input(INPUT_POST, 'email');
             $cpf = filter_input(INPUT_POST, 'cpf');
             $cnpj = filter_input(INPUT_POST, 'cnpj');
@@ -28,7 +28,7 @@
     <body style="position: relative; background-color: #ededed; height: 100%">
         <div >
             <div style="position: relative; top: 1em; text-align:center; font-weight: bold;">Editar: <?php echo $nome; ?></div>
-            <div style="position: relative; top: 3em; left: 35em; width: 700px;">
+            <div style="position: relative; top: 3em; left: 35em; width: 700px; height: 700px;">
                 <form action="consulta_func.php" method="post">
                 <table>
             <table>

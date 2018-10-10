@@ -106,7 +106,7 @@ header('Content-Type: text/html; charset=utf-8');
                 echo "<input name='email' type='hidden' value='" .$dados['email']. "'>";
                 echo "<input name='cpf' type='hidden' value='" .$dados['cpf']. "'>";
                 echo "<input name='cnpj' type='hidden' value='" .$dados['cnpj']. "'>";
-                echo "<button>Editar</button>";
+                echo "<button class='btn btn-success' value='Editar'>Editar</button>";
                 echo "</form>";
                 
                 // Cria um formulário para remover os dados 
@@ -116,7 +116,7 @@ header('Content-Type: text/html; charset=utf-8');
                 echo "<input name='nome' type='hidden' value='" .$dados['nome']. "'>";
                 echo "<input name='datanasc' type='hidden' value='" .$dados['datanasc']. "'>";
                 echo "<input name='cpf' type='hidden' value='" .$dados['cpf']. "'>";
-                echo "<button>Remover</button>";
+                echo "<button class='btn btn-danger'>Remover</button>";
                 echo "</form>";
                 echo "</td>";
 

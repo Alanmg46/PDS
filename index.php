@@ -67,8 +67,8 @@
                 <a href="cliente/consulta_cliente.php">Consulta de Clientes</a><br>
                 <a href="funcionario/consulta_func.php">Consulta de Funcionários</a><br>
                 <a href="fornecedor/consulta_forn.php">Consulta de Fornecedores</a><br>
-                <a href="compras/consulta_compras.php">Consulta de Compras</a><br>
-                <a href="produtos/consulta_produto.php">Consulta de Produtos</a>
+                <a href="produtos/consulta_produto.php">Consulta de Produtos</a><br>
+                <a href="compras/consulta_compras.php">Cadastro de Compras</a>
             </div>
     </body>
     <footer style="position: fixed; bottom:0; left:0; background-color: #d6d6d6; width: 100%; height: 5em; text-align: center;">

@@ -4,12 +4,13 @@ $consulta = "SELECT * FROM funcionario";
 $con = $mysqli->query($consulta) or die($mysqli->error);
 header('Content-Type: text/html; charset=utf-8');
     //Recebe os dados com as alterações feitas
+            $funcao = $_POST['funcao'];
+            $_funcao = implode(",", $_funcao);
             $id = filter_input(INPUT_POST, 'id');
             $_nome = filter_input(INPUT_POST, 'nome');
             $_identidade = filter_input(INPUT_POST, 'identidade');
             $_carteira = filter_input(INPUT_POST, 'carteira');
             $_salario = filter_input(INPUT_POST, 'salario');
-            $_funcao = filter_input(INPUT_POST, 'funcao');
             $_conta = filter_input(INPUT_POST, 'conta');
             $_datanasc = filter_input(INPUT_POST, 'data');
             $_telefone = filter_input(INPUT_POST, 'telefone');
@@ -34,7 +35,9 @@ if($mysqli->query($sql) === true){
 } else{
     echo "ERROR: Could not able to execute $sql. " . $mysqli->error;
 }
+
  
 // Close connection
 $mysqli->close();
+header("Location:confirmar_edicao.php")
 ?>

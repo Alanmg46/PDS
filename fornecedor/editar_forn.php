@@ -21,7 +21,7 @@
     top: 20%; text-align: center; font-weight: bold; color: white;">Projeto de Desenvolvimento de Sistemas</div></div>
     <body class="box" style="background-color: #ededed;">
         <div >
-            <div style="position: relative; top: 1em; text-align:center; font-weight: bold;">Edição de Cliente</div>
+            <div style="position: relative; top: 1em; text-align:center; font-weight: bold;">Edição de Fornecedor</div>
             <div style="position: relative; top: 3em; left: 35em; width: 700px;">
                 <form action="salvar_forn.php" method="post">
                 <table>
@@ -65,7 +65,7 @@
                 </table>
                 <br><br>
                 <input class="btn btn-success" type="submit" name="gravar" value="Editar">
-                <button type="button" class="btn btn-danger">Cancelar</button>
+                <input type="button" value="Cancelar" onClick="JavaScript: window.history.back();" class="btn btn-danger">
             </form>
             </div>
         </div>

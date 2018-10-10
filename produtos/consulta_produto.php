@@ -70,6 +70,7 @@ header('Content-Type: text/html; charset=utf-8');
             <tr>
             <th>Código</th>
             <th>Descrição</th>
+            <th>Valor Unitário</th>
             <th></th>
             </tr>
             </thead>
@@ -78,6 +79,7 @@ header('Content-Type: text/html; charset=utf-8');
                 echo "<tr>";
                 echo "<td>" .$dados['id']. "</td>";
                 echo "<td>" .$dados['descricao']. "</td>";
+                echo "<td>" ."R$ ".$dados['valor']. "</td>";
                 
                 // Cria um formulário para enviar os dados para a página de edição 
                 // Colocamos os dados dentro input hidden
@@ -85,7 +87,8 @@ header('Content-Type: text/html; charset=utf-8');
                 echo "<form action='editar_produto.php' method='post'>";
                 echo "<input name='id' type='hidden' value='" .$dados['id']. "'>";
                 echo "<input name='descricao' type='hidden' value='" .$dados['descricao']. "'>";
-                echo "<button>Editar</button>";
+                echo "<input name='valor' type='hidden' value='" .$dados['valor']. "'>";
+                echo "<button class='btn btn-success' value='Editar'>Editar</button>";
                 echo "</form>";
                 
                 // Cria um formulário para remover os dados 
@@ -93,7 +96,7 @@ header('Content-Type: text/html; charset=utf-8');
                 echo "<form action='validar_exclusao.php' method='post'>";
                 echo "<input name='id' type='hidden' value='" .$dados['id']. "'>";
                 echo "<input name='descricao' type='hidden' value='" .$dados['descricao']. "'>";
-                echo "<button>Remover</button>";
+                echo "<button class='btn btn-danger'>Remover</button>";
                 echo "</form>";
                 echo "</td>";
 

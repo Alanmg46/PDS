@@ -60,7 +60,7 @@ if (!mysqli_query($con,$sql))
     die('Error: ' . mysqli_error($con));
 }
 // MOSTRA A MENSAGEM DE SUCESSO
-echo $endereco;
+header("Location:confirmar_cadastro.php");
 
 mysqli_close($con);
 

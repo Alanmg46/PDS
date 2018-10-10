@@ -28,6 +28,7 @@ if($mysqli->query($sql) === true){
 } else{
     echo "ERROR: Could not able to execute $sql. " . $mysqli->error;
 }
+header("Location:confirmar_edicao.php");
  
 // Close connection
 $mysqli->close();

@@ -123,7 +123,7 @@ table.blueTable tfoot .links a{
                 echo "<input name='cpf' type='hidden' value='" .$dados['cpf']. "'>";
                 echo "<input name='cnpj' type='hidden' value='" .$dados['cnpj']. "'>";
                 echo "<input name='observacao' type='hidden' value='" .$dados['observacao']. "'>";
-                echo "<button>Detalhar Funcionário</button>";
+                echo "<button class='btn btn-info'>Detalhar Funcionário</button>";
                 echo "</form>";
                 echo "<form action='editar_func.php' method='post'>";
                 echo "<input name='id' type='hidden' value='" .$dados['id']. "'>";
@@ -141,7 +141,7 @@ table.blueTable tfoot .links a{
                 echo "<input name='cpf' type='hidden' value='" .$dados['cpf']. "'>";
                 echo "<input name='cnpj' type='hidden' value='" .$dados['cnpj']. "'>";
                 echo "<input name='observacao' type='hidden' value='" .$dados['observacao']. "'>";
-                echo "<button>Editar</button>";
+                echo "<button class='btn btn-success' value='Editar'>Editar</button>";
                 echo"</form>";
                 // Cria um formulário para remover os dados 
                 // Colocamos o id dos dados a serem removidos dentro do input hidden
@@ -150,7 +150,7 @@ table.blueTable tfoot .links a{
                 echo "<input name='nome' type='hidden' value='" .$dados['nome']. "'>";
                 echo "<input name='cpf' type='hidden' value='" .$dados['cpf']. "'>";
                 echo "<input name='cnpj' type='hidden' value='" .$dados['cnpj']. "'>";
-                echo "<button>Remover</button>";
+                echo "<button class='btn btn-danger'>Remover</button>";
                 echo "</form>";
                 echo "</td>";
 

@@ -99,14 +99,14 @@ header('Content-Type: text/html; charset=utf-8');
                 echo "<form action='editar_forn.php' method='post'>";
                 echo "<input name='id' type='hidden' value='" .$dados['id']. "'>";
                 echo "<input name='nome' type='hidden' value='" .$dados['nome']. "'>";
-                echo "<input name='datanasc' type='hidden' value='" .$dados['telefone']. "'>";
-                echo "<input name='telefone' type='hidden' value='" .$dados['cidade']. "'>";
-                echo "<input name='cep' type='hidden' value='" .$dados['estado']. "'>";
+                echo "<input name='telefone' type='hidden' value='" .$dados['telefone']. "'>";
+                echo "<input name='cidade' type='hidden' value='" .$dados['cidade']. "'>";
+                echo "<input name='estado' type='hidden' value='" .$dados['estado']. "'>";
                 echo "<input name='endereco' type='hidden' value='" .$dados['endereco']. "'>";
                 echo "<input name='email' type='hidden' value='" .$dados['email']. "'>";
                 echo "<input name='cpf' type='hidden' value='" .$dados['cpf']. "'>";
                 echo "<input name='cnpj' type='hidden' value='" .$dados['cnpj']. "'>";
-                echo "<button>Editar</button>";
+                echo "<button class='btn btn-success' value='Editar'>Editar</button>";
                 echo "</form>";
                 
                 // Cria um formulário para remover os dados 
@@ -115,7 +115,7 @@ header('Content-Type: text/html; charset=utf-8');
                 echo "<input name='id' type='hidden' value='" .$dados['id']. "'>";
                 echo "<input name='nome' type='hidden' value='" .$dados['nome']. "'>";
                 echo "<input name='cpf' type='hidden' value='" .$dados['cpf']. "'>";
-                echo "<button>Remover</button>";
+                echo "<button class='btn btn-danger'>Remover</button>";
                 echo "</form>";
                 echo "</td>";
 

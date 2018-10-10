@@ -31,4 +31,5 @@ if($mysqli->query($sql) === true){
  
 // Close connection
 $mysqli->close();
+header("location:confirmar_edicao.php")
 ?>

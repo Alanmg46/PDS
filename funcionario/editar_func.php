@@ -10,7 +10,7 @@
             $datanasc = filter_input(INPUT_POST, 'datanasc');
             $telefone = filter_input(INPUT_POST, 'telefone');
             $cep = filter_input(INPUT_POST, 'cep');
-            $endereco = filter_input(INPUT_POST, $endereco);
+            $endereco = filter_input(INPUT_POST, 'endereco');
             $email = filter_input(INPUT_POST, 'email');
             $cpf = filter_input(INPUT_POST, 'cpf');
             $cnpj = filter_input(INPUT_POST, 'cnpj');
@@ -25,10 +25,10 @@
         </head>
     <div style="position: relative; z-index: 1; background-image: linear-gradient(to left, #3c82eb, #00adff, #00cdde, #00e389, #a8eb12); width: 100%; height: 3em; font-size: 1.5em; font-family: 'Raleway', sans-serif;"><div style="position: relative;
     top: 20%; text-align: center; font-weight: bold; color: white;">Projeto de Desenvolvimento de Sistemas</div></div>
-    <body style="position: relative; background-color: #ededed; height: 100%">
+    <body style="position: relative; background-color: #ededed; height: 100%;">
         <div >
-            <div style="position: relative; top: 1em; text-align:center; font-weight: bold;">Editar: <?php echo $nome; ?></div>
-            <div style="position: relative; top: 3em; left: 35em; width: 700px;">
+            <div style="top: 1em; text-align:center; font-weight: bold;">Editar: <?php echo $nome; ?></div>
+            <div style="position: relative; top: 3em; left: 35em; width: 700px; height: 700px;">
                 <form action="salvar_func.php" method="post">
                 <table>
             <table>
@@ -53,10 +53,12 @@
                         <td><input type="text" name="salario" id="salario" value="<?php echo $salario; ?>"/></td>
                     </tr>
                     <tr>
-                        <select name="funcao">
-                          <option value="Motorista">Motorista</option>
-                          <option value="Técnico">Técnico</option>
-                        </select>
+                        <td>Motorista</td>
+                        <td><input type="checkbox" name="funcao[]" value="Motorista"></td>
+                    </tr>
+                    <tr>
+                        <td>Técnico</td>
+                        <td><input type="checkbox" name="funcao[]" value="Técnico"></td>
                     </tr>
                     </tr>
                     <tr>
@@ -100,7 +102,7 @@
                 </table>
                 <br><br>
                 <input class="btn btn-success" type="submit" name="gravar" value="Editar">
-                <button type="button" class="btn btn-danger">Cancelar</button>
+                <input type="button" value="Cancelar" onClick="JavaScript: window.history.back();" class="btn btn-danger">
             </form>
             </div>
         </div>

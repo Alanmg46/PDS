@@ -1,9 +1,3 @@
-<?php
-            $id = filter_input(INPUT_POST, 'id');
-            $nome = filter_input(INPUT_POST, 'nome');
-            $datanasc = filter_input(INPUT_POST, 'datanasc');
-            $cpf = filter_input(INPUT_POST, 'cpf');
-?>
 <html>
     <head>
         <title>Projeto de Desenvolvimento de Sistemas</title>
@@ -15,30 +9,11 @@
     top: 20%; text-align: center; font-weight: bold; color: white;">Projeto de Desenvolvimento de Sistemas</div></div>
     <body class="box" style="background-color: #ededed;">
         <div >
-            <div style="position: relative; top: 1em; text-align:center; font-weight: bold;">Exclusão de Cliente</div>
+            <div style="position: relative; top: 1em; text-align:center; font-weight: bold;">Exclusão de Fornecedor</div>
             <div style="position: relative; top: 3em; left: 35em; width: 700px;">
-                <form action="remover_cliente.php" method="post">
-                        <table>
-                            <tr>
-                                <td>ID:</td>
-                                <td><input type="text" readonly="true" name="id" value="<?php echo $id; ?>"></td>
-                            </tr>
-                            <tr>
-                                <td>Nome:</td>
-                                <td><input type="text" readonly="true" name="nome" size="60" value="<?php echo $nome; ?>"></td>
-                            </tr>
-                            <tr>
-                                <td>Data de Nascimento:</td>
-                                <td><input type="text" readonly="true" name="datanasc" value="<?php echo $datanasc; ?>"></td>
-                            </tr>
-                            <tr>
-                                <td>CPF: </td>
-                                <td><input type="text" readonly="true" name="cpf" value="<?php echo $cpf; ?>"></td>
-                            </tr>
-                        </table>
-                    <input class="btn btn-success" type="submit" name="gravar" value="Excluir">
-                    <input type="button" value="Cancelar" onClick="JavaScript: window.history.back();" class="btn btn-danger">
-                </form>
+                <b>Fornecedor removido com sucesso!</b><br>
+                <a href="consulta_forn.php"><input class="btn btn-success" type="submit" name="gravar" value="Retornar"></a>
+                        
         </body>
      <footer style="position: fixed; bottom:0; left:0; background-color: #d6d6d6; width: 100%; height: 5em; text-align: center;">
         Desenvolvido por Alan M, Ana T, Anne G e Ramon V</br> © 2018</br><a href="https://www.dokuwiki.org/template:bootstrap3" title="Bootstrap template for DokuWiki" target="" class="navbar-link">

@@ -49,8 +49,8 @@ if (!mysqli_query($con,$sql))
     die('Error: ' . mysqli_error($con));
 }
 // MOSTRA A MENSAGEM DE SUCESSO
-echo "Fornecedor cadastrado com SUCESSO";
 
 mysqli_close($con);
+header("Location:confirmar_cadastro.php");
 
 ?>

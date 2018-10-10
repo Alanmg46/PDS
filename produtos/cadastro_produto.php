@@ -15,12 +15,16 @@
                 <table>
                     <tr>
                         <td>Descrição:</td>
-                        <td><input type="text" name="descricao" id="nome" placeholder="Nome" /></td>
+                        <td><input type="text" name="descricao" id="nome" placeholder="Descrição" /></td>
+                    </tr>
+                    <tr>
+                        <td>Valor Unitário:</td>
+                        <td><b>R$</b><input type="text" name="valor" id="valor" placeholder="Valor Unitário R$" /></td>
                     </tr>
                 </table>
                 <br><br>
                 <input class="btn btn-success" type="submit" name="gravar" value="Cadastrar">
-                <button type="button" class="btn btn-danger">Cancelar</button>
+                <input type="button" value="Cancelar" onClick="JavaScript: window.history.back();" class="btn btn-danger">
             </form>
             </div>
         </div>

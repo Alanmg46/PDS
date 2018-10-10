@@ -1,7 +1,7 @@
 <?php
 
 include("../conexao.php");
-$consulta = "SELECT * FROM cliente";
+$consulta = "SELECT * FROM compras";
 $con = $mysqli->query($consulta) or die($mysqli->error);
 header('Content-Type: text/html; charset=utf-8');
 ?>
@@ -69,14 +69,11 @@ header('Content-Type: text/html; charset=utf-8');
             <thead>
             <tr>
             <th>ID</th>
-            <th>Nome</th>
-            <th>Data de Nascimento</th>
-            <th>Telefone</th>
-            <th>CEP</th>
-            <th>Endereço</th>
-            <th>Email</th>
-            <th>CPF</th>
-            <th>CNPJ</th>
+            <th>Data</th>
+            <th>Fornecedor</th>
+            <th>Produto</th>
+            <th>Desconto</th>
+            <th>Valor total</th>
             <th></th>
             </tr>
             </thead>
@@ -84,39 +81,32 @@ header('Content-Type: text/html; charset=utf-8');
                 while($dados = mysqli_fetch_assoc($con)){
                 echo "<tr>";
                 echo "<td>" .$dados['id']. "</td>";
-                echo "<td>" .$dados['nome']. "</td>";
-                echo "<td>" .$dados['datanasc']. "</td>";
-                echo "<td>" .$dados['telefone']. "</td>";
-                echo "<td>" .$dados['cep']. "</td>";
-                echo "<td>" .$dados['endereco']. "</td>";
-                echo "<td>" .$dados['email']. "</td>";
-                echo "<td>" .$dados['cpf']. "</td>";
-                echo "<td>" .$dados['cnpj']. "</td>";
+                echo "<td>" .$dados['data']. "</td>";
+                echo "<td>" .$dados['fornecedor']. "</td>";
+                echo "<td>" .$dados['produto']. "</td>";
+                echo "<td>" .$dados['desconto']. "</td>";
+                echo "<td>" ."R$".$dados['valor_total']. "</td>";
                 
                 // Cria um formulário para enviar os dados para a página de edição 
                 // Colocamos os dados dentro input hidden
                 echo "<td>";
-                echo "<form action='editar_cliente.php' method='post'>";
+                echo "<form action='editar_compras.php' method='post'>";
                 echo "<input name='id' type='hidden' value='" .$dados['id']. "'>";
-                echo "<input name='nome' type='hidden' value='" .$dados['nome']. "'>";
-                echo "<input name='datanasc' type='hidden' value='" .$dados['datanasc']. "'>";
-                echo "<input name='telefone' type='hidden' value='" .$dados['telefone']. "'>";
-                echo "<input name='cep' type='hidden' value='" .$dados['cep']. "'>";
-                echo "<input name='endereco' type='hidden' value='" .$dados['endereco']. "'>";
-                echo "<input name='email' type='hidden' value='" .$dados['email']. "'>";
-                echo "<input name='cpf' type='hidden' value='" .$dados['cpf']. "'>";
-                echo "<input name='cnpj' type='hidden' value='" .$dados['cnpj']. "'>";
-                echo "<button>Editar</button>";
+                echo "<input name='data' type='hidden' value='" .$dados['data']. "'>";
+                echo "<input name='fornecedor' type='hidden' value='" .$dados['fornecedor']. "'>";
+                echo "<input name='produto' type='hidden' value='" .$dados['produto']. "'>";
+                echo "<input name='desconto' type='hidden' value='" .$dados['desconto']. "'>";
+                echo "<input name='valor_total' type='hidden' value='" .$dados['valor_total']. "'>";
+                echo "<button class='btn btn-success' value='Editar'>Editar</button>";
                 echo "</form>";
                 
                 // Cria um formulário para remover os dados 
                 // Colocamos o id dos dados a serem removidos dentro do input hidden
                 echo "<form action='validar_exclusao.php' method='post'>";
                 echo "<input name='id' type='hidden' value='" .$dados['id']. "'>";
-                echo "<input name='nome' type='hidden' value='" .$dados['nome']. "'>";
-                echo "<input name='datanasc' type='hidden' value='" .$dados['datanasc']. "'>";
-                echo "<input name='cpf' type='hidden' value='" .$dados['cpf']. "'>";
-                echo "<button>Remover</button>";
+                echo "<input name='produto' type='hidden' value='" .$dados['produto']. "'>";
+                echo "<input name='valor_total' type='hidden' value='" .$dados['valor_total']. "'>";
+                echo "<button class='btn btn-danger'>Remover</button>";
                 echo "</form>";
                 echo "</td>";
 

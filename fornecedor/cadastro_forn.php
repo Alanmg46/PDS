@@ -7,7 +7,7 @@
     top: 20%; text-align: center; font-weight: bold; color: white;">Projeto de Desenvolvimento de Sistemas</div></div>
     <body class="box" style="background-color: #ededed;">
         <div >
-            <div style="position: relative; top: 1em; text-align:center; font-weight: bold;">Cadastro de Clientes</div>
+            <div style="position: relative; top: 1em; text-align:center; font-weight: bold;">Cadastro de Fornecedor</div>
             <div style="position: relative; top: 3em; left: 35em; width: 700px;">
                 <form action="inserir_forn.php" method="post">
                 <table>
@@ -29,7 +29,7 @@
                     </tr>
                     <tr>
                         <td>Endereco: </td>
-                        <td><input type="text" name="Endereco" id="numero" size="5" placeholder="Número"/></td>
+                        <td><input type="text" name="endereco" id="numero" size="5" placeholder="Número"/></td>
                     </tr>
                     <tr>
                         <td>Email: </td>
@@ -46,7 +46,7 @@
                 </table>
                 <br><br>
                 <input class="btn btn-success" type="submit" name="gravar" value="Cadastrar">
-                <button type="button" class="btn btn-danger">Cancelar</button>
+                <input type="button" value="Cancelar" onClick="JavaScript: window.history.back();" class="btn btn-danger">
             </form>
             </div>
         </div>
