@@ -15,6 +15,7 @@ require_once('../model/Produto.php');
 $descricao = $_POST['descricao'];
 $valor = $_POST['valor'];
 
+
 // CASO TUDO ESTEJA OK INSERE DADOS NA BASE DE DADOS
 $sql = "INSERT INTO produto (id, descricao, valor) VALUES (NULL, '$descricao', '$valor')";
 

@@ -36,7 +36,7 @@
                 </table>
                 <br><br>
                 <input class="btn btn-success" type="submit" name="gravar" value="Cadastrar">
-                <button type="button" class="btn btn-danger">Cancelar</button>
+                <input type="button" value="Cancelar" onClick="JavaScript: window.history.back();" class="btn btn-danger">
             </form>
             </div>
         </div>

@@ -22,6 +22,7 @@ include("../conexao.php");
 // INICIA LIGAÇÃO À BASE DE DADOS
 $con=mysqli_connect("localhost","root","","pds");
 
+
 // VERIFICA A LIGAÇÃO NÃO TEM ERROS
 if (mysqli_connect_errno())
 {
@@ -45,6 +46,8 @@ $cpf = mask($_POST['cpf'], '###.###.###-##');
 $cnpj = mask($_POST['cnpj'], '##.###.###/####-##');
 
 // CASO TUDO ESTEJA OK INSERE DADOS NA BASE DE DADOS
+
+
 $sql = "INSERT INTO cliente (id, nome, datanasc, telefone, cep, endereco, email, cpf, cnpj) VALUES (NULL, '$nome', '$data', '$telefone', '$cep', '$endereco', '$email', '$cpf', '$cnpj')";
 
 
