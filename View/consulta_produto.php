@@ -15,6 +15,7 @@ include '../base/header/header.php';
             <tr>
             <th>Código</th>
             <th>Descrição</th>
+            <th>Fornecedor</th>
             <th>Valor Unitário</th>
             <th></th>
             </tr>
@@ -24,6 +25,7 @@ include '../base/header/header.php';
                 echo "<tr>";
                 echo "<td>" .$dados['id']. "</td>";
                 echo "<td>" .$dados['descricao']. "</td>";
+                echo "<td>" .$dados['fornecedor']. "</td>";
                 echo "<td>" ."R$ ".$dados['valor']. "</td>";
                 
                 // Cria um formulário para enviar os dados para a página de edição 

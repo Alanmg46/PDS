@@ -3,7 +3,7 @@
         <div >
             <div style="position: relative; top: 1em; text-align:center; font-weight: bold;">Cadastro de Produtos</div>
             <div style="position: relative; top: 3em; left: 35em; width: 700px;">
-                <form action="inserir_produto.php" method="post">
+                <form action="../Dados/inserir_produto.php" method="post">
                 <table>
                     <tr>
                         <td>Descrição:</td>

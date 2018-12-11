@@ -15,9 +15,12 @@ require_once('../model/Venda.php');
 
 $data_venda = $_POST['data'];
 $cliente = $_POST['cliente'];
-$produto = $_POST['produto'];
+$_produto = $_POST['produto'];
+$produto = implode(", ", $_produto);
+$_valor = $_POST['valor'];
+$valor = implode("+=", $_valor);
 $desconto = $_POST['desconto'];
-$valorTotal = $_POST['valor_total'];
+$valorTotal = $valor;
 
 // CASO TUDO ESTEJA OK INSERE DADOS NA BASE DE DADOS
 $sql = "INSERT INTO `vendas` (`id`, `data_venda`, `cliente`, `produto`, `desconto`, `valor_total`) VALUES (NULL, '$data_venda', '$cliente', '$produto', '$desconto', '$valorTotal')";

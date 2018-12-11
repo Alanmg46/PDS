@@ -42,7 +42,7 @@
                     </tr>
                     <tr>
                         <td>Função</td>
-                        <td><input type="text" readonly="true" name="cpf" id="cpf" value="<?php echo $funcao; ?>"/></td>
+                        <td><input type="text" readonly="true" name="funcao" id="funcao" value="<?php echo $funcao; ?>"/></td>
                     </tr>
                     </tr>
                     <tr>

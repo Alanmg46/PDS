@@ -1,4 +1,13 @@
-<?php include '../base/header/header.php';?>
+<?php
+
+include("../conexao.php");
+$consulta = "SELECT * FROM produto";
+$con = $mysqli->query($consulta) or die($mysqli->error);
+header('Content-Type: text/html; charset=utf-8');
+
+include '../base/header/header.php';
+
+?>
     <body>
         <div >
             <div style="position: relative; top: 1em; text-align:center; font-weight: bold;">Cadastro de Compras</div>
@@ -26,12 +35,18 @@
                         <td><input type="text" name="desconto" placeholder="Desconto"/></td>
                     </tr>
                     <tr>
-                        <td>Produto: </td>
-                        <td><input type="text" name="produto" id="produto"/></td>
-                    </tr>
-                    <tr>
                         <td>Fornecedor:</td>
                         <td><input type="text" name="fornecedor" id="fornecedor"></td>
+                    </tr>
+                </table></br></br>
+                <table>
+                        <?php 
+                        while($dados = mysqli_fetch_assoc($con)){
+                        echo "<tr>";
+                        echo "<input name='id' type='hidden' value='" .$dados['id']. "'>";
+                        echo "<input type='checkbox' name='produto[]' value='".$dados['descricao']."'>" .$dados['descricao']."⠀⠀⠀⠀⠀⠀⠀⠀⠀R$ "."<input type='hidden' name='valor[]' value='".$dados['valor']."'>" .$dados['valor']."</td>"."</td></br>";
+                        echo "<tr>";}
+                        ?>
                     </tr>
                 </table>
                 <br><br>
